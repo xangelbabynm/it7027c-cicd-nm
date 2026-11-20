@@ -24,6 +24,6 @@ resource "docker_container" "nginx" {
     }
 }
 
-output = "container_name" {
+output "container_name" {
     value = docker_container.nginx.name
 }
