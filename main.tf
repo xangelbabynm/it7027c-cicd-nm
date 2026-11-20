@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     docker = {
-        soruce = "kreuzwerker/docker"
+        source = "kreuzwerker/docker"
         version = "~> 3.0"
     }
     }
@@ -23,6 +23,7 @@ resource "docker_container" "nginx" {
         external = 8080
     }
 }
+
 output = "container_name" {
     value = docker_container.nginx.name
 }
