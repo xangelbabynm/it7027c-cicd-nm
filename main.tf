@@ -9,7 +9,7 @@ terraform {
 provider "docker" {
     host = "unix:///var/run/docker.sock"
 }
-resource "docker_imgage" "nginx" {
+resource "docker_image" "nginx" {
     name = "nginx:alpine"
     keep_locally = true
 }
